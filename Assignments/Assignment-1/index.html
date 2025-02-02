@@ -6,15 +6,225 @@
         <meta charset="UTF-8">
         <title>CoolWeather</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body> 
-        <nav id="nav">
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About</a>
-        </nav>
-        <div>
-            
+        <br>
+        <div class="container">
+            <img class='topmedia' src="assets/topmedia.png" alt="Sunny">
+            <section class="weather">
+                <div class="selections">
+                    <div class="option">
+                        <label class="switch">
+                            <input type="checkbox" id="feelsLikeToggle" onclick="toggleFeelsLike()">
+                            <span class="slider round"></span>
+                        </label>
+                        <h3 class="option-text">Feels Like</h3>
+                    </div>
+
+                    <div class="option">
+                        <label class="switch">
+                            <input type="checkbox" id="tempToggle" onclick="toggleTemperature()">
+                            <span class="slider round"></span>
+                        </label>
+                        <h3 class="option-text">°C</h3>
+                    </div>
+                </div>
+                <a href="./map.html" target="_blank">
+                    <div class="weather-info">
+                        <h2>Haverford</h2>
+                        <h1 class="temp">18°C</h1>
+                    </div>
+                </a>
+            </section>
+            <br>
+            <section>
+                <div class="weather-details">
+                    <div class="detail">
+                        <p class="detail-title">Wind</p>
+                        <p class="detail-value">5 km/h</p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-title">Humidity</p>
+                        <p class="detail-value">50%</p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-title">Visibility</p>
+                        <p class="detail-value">10 km</p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-title">AQI</p>
+                        <p class="detail-value">3</p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-title">Percipitaion</p>
+                        <p class="detail-value">3</p>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section>
+                <div class="weather-details">
+                    <div class="temp-info">
+                        <img class='icon' src="assets/sunrise.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">6:00 AM</p>
+                            <p class="detail-value temp">16°C</p>
+                        </div>
+                    </div>
+                    <div class="temp-info">
+                        <img class='icon' src="assets/sunny.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">9:00 AM</p>
+                            <p class="detail-value temp">24°C</p>
+                        </div>
+                    </div>
+                    <div class="temp-info">
+                        <img class='icon' src="assets/rainy.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">12:00 PM</p>
+                            <p class="detail-value temp">22°C</p>
+                        </div>
+                    </div>
+                    <div class="temp-info">
+                        <img class='icon' src="assets/thunder-storm.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">3:00 PM</p>
+                            <p class="detail-value temp">18°C</p>
+                        </div>
+                    </div>
+                    <div class="temp-info">
+                        <img class='icon' src="assets/cloudy.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">6:00 PM</p>
+                            <p class="detail-value temp">16°C</p>
+                        </div>
+                    </div>
+                    <div class="temp-info">
+                        <img class='icon' src="assets/sunset.png" alt="sunrise">
+                        <div class="temp-detail">
+                            <p class="detail-value">9:00 PM</p>
+                            <p class="detail-value temp">14°C</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section>
+                <h2 style="text-align: center;">Weekly Forecast</h2>
+                <div class="forecast">
+                    <div class="day">
+                        <h3>Today</h3>
+                        <img class='ind-cast' src="assets/sunny.png" alt="Sunny">
+                        <div class="slider-container">
+                            <p class="temp">18°C</p>
+                            <input type="range" disabled  min="0" max="50" value="40" id="slider">
+                            <p class="temp">28°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Mon</h3>
+                        <img class='ind-cast' src="assets/sunny.png" alt="Sunny">
+                        <div class="slider-container">
+                            <p class="temp">20°C</p>
+                            <input type="range" disabled  min="0" max="50" value="35" id="slider">
+                            <p class="temp">26°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Tue</h3>
+                        <img class='ind-cast' src="assets/thunder-storm.png" alt="thunder-storm">
+                        <div class="slider-container">
+                            <p class="temp">15°C</p>
+                            <input type="range" disabled  min="0" max="50" value="15" id="slider">
+                            <p class="temp">20°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Wed</h3>
+                        <img class='ind-cast' src="assets/rainy.png" alt="rainy">
+                        <div class="slider-container">
+                            <p class="temp">22°C</p>
+                            <input type="range" disabled  min="0" max="50" value="25" id="slider">
+                            <p class="temp">25°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Thu</h3>
+                        <img class='ind-cast' src="assets/rainy.png" alt="rainy">
+                        <div class="slider-container">
+                            <p class="temp">18°C</p>
+                            <input type="range" disabled  min="0" max="50" value="30" id="slider">
+                            <p class="temp">28°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Fri</h3>
+                        <img class='ind-cast' src="assets/sunny.png" alt="Sunny">
+                        <div class="slider-container">
+                            <p class="temp">22°C</p>
+                            <input type="range" disabled  min="0" max="50" value="45" id="slider">
+                            <p class="temp">28°C</p>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3>Sat</h3>
+                        <img class='ind-cast' src="assets/cloudy.png" alt="cloudy">
+                        <div class="slider-container">
+                            <p class="temp">18°C</p>
+                            <input type="range" disabled  min="0" max="50" value="22" id="slider">
+                            <p class="temp">22°C</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <div class="search">
+                <input type="text" placeholder="Search City" class="search-bar">
+                <button type="submit"><i class="fa fa-search search-icon"></i></button>
+            </div>
+        </div>
     </body>
+    
+    <script>
+        function toggleTemperature() {
+            var checkBox = document.getElementById("tempToggle");
+            var tempElements = document.getElementsByClassName("temp");
+    
+            for (var i = 0; i < tempElements.length; i++) {
+                var tempElement = tempElements[i];
+                var currentTemp = parseFloat(tempElement.innerHTML);
+                if (checkBox.checked) {
+                    var newTemp = (currentTemp * 9/5) + 32;
+                    tempElement.innerHTML = Math.round(newTemp) + "°F";
+                } else {
+                    var newTemp = (currentTemp - 32) * 5/9;
+                    tempElement.innerHTML = Math.round(newTemp) + "°C";
+                }
+            }
+        }
+
+        function toggleFeelsLike() {
+            var checkBox = document.getElementById("feelsLikeToggle");
+            var tempElements = document.getElementsByClassName("temp");
+    
+            for (var i = 0; i < tempElements.length; i++) {
+                var tempElement = tempElements[i];
+                var currentTemp = parseFloat(tempElement.innerHTML);
+                if (checkBox.checked) {
+                    tempElement.innerHTML = currentTemp-2 + "°C";
+                } else {
+                    tempElement.innerHTML = currentTemp+2 + "°C";
+                }
+            }
+        }
+    </script>
+    
 
 </html>
